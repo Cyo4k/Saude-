@@ -262,8 +262,8 @@ O sistema "Saúde+" implementa as seguintes funcionalidades:
 
 
 
-**Descrição da Arquitetura do Backend (Monolítico Modular):**
-* O backend é uma única aplicação Node.js/Express.
+**Descrição da Arquitetura do Backend:**
+* O backend é uma aplicação Node.js/Express.
 * A organização do código é feita separando as preocupações em:
     * **Rotas (`routes/`):** Define os endpoints da API para cada recurso principal (ex: `authRoutes.js`, `userRoutes.js`, `appointmentRoutes.js`, `vaccineRoutes.js`, `medicationRoutes.js`, `upaRoutes.js`). Elas direcionam as requisições para os controllers apropriados.
     * **Controladores (`controllers/`):** Contêm a lógica de negócio para cada rota (ex: `authController.js`, `UserController.js`, `appointmentController.js`, `vaccineController.js`, `medicationController.js`, `upaController.js`). Eles interagem com os modelos para acessar e manipular dados.
