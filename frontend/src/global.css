@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  /* ... suas outras variáveis ... */
+  --font-family-primary: 'Open Sans', var(--font-family-sans-serif);
+  --font-family-secondary: 'Roboto', var(--font-family-sans-serif);
+}
+
+
+/* 
+  OPCIONAL: Reset ou Normalize CSS
+  Para garantir uma base consistente entre navegadores.
+  Você pode adicionar um reset simples ou usar bibliotecas como Normalize.css.
+  Exemplo de reset simples:
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 1. Variáveis CSS (Custom Properties) */
+:root {
+    /* Cores - Substitua pelos valores da sua imagem */
+    --primary-color: #007bff; /* Ex: Azul primário */
+    --secondary-color: #6c757d; /* Ex: Cinza secundário */
+    --accent-color: #28a745; /* Ex: Verde para sucesso ou destaque */
+    --danger-color: #dc3545; /* Ex: Vermelho para erros ou alertas */
+    --light-color: #f8f9fa; /* Ex: Cor clara para fundos */
+    --dark-color: #343a40; /* Ex: Cor escura para texto ou fundos */
+    --text-color: #212529; /* Ex: Cor principal do texto */
+    --text-color-muted: #6c757d; /* Ex: Cor de texto mais clara */
+    --background-color: #ffffff; /* Ex: Cor de fundo principal */
+    --border-color: #dee2e6; /* Ex: Cor para bordas */
+
+    /* Tipografia - Substitua pelos valores da sua imagem */
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    --font-family-primary: "Sua Fonte Principal", var(--font-family-sans-serif); /* Ex: 'Open Sans', sans-serif */
+    --font-size-base: 1rem; /* 16px por padrão */
+    --font-size-lg: calc(var(--font-size-base) * 1.25);
+    --font-size-sm: calc(var(--font-size-base) * 0.875);
+    --line-height-base: 1.5;
+
+    /* Espaçamento */
+    --spacing-unit: 8px; /* Unidade base para margens e paddings */
+    --border-radius: 0.25rem; /* 4px */
+}
+
+/* 2. Estilos Globais para o Body e HTML */
+html {
+    font-size: 16px; /* Define a base para unidades 'rem' */
+}
+
+body {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 3. Estilos para Títulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: calc(var(--spacing-unit) * 2); /* 16px */
+    font-weight: 500; /* Ou o peso que você identificar */
+    color: var(--primary-color); /* Ou uma cor específica para títulos */
+}
+
+h1 {
+    font-size: calc(var(--font-size-base) * 2.5);
+} /* 40px */
+h2 {
+    font-size: calc(var(--font-size-base) * 2);
+} /* 32px */
+h3 {
+    font-size: calc(var(--font-size-base) * 1.75);
+} /* 28px */
+
+/* 4. Estilos para Parágrafos e Links */
+p {
+    margin-top: 0;
+    margin-bottom: var(--font-size-base); /* 16px */
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    filter: brightness(90%);
+}
+
+/* 5. Estilos para Elementos Comuns (Botões, Inputs, etc.) */
+/* Adapte estes exemplos conforme o design da sua imagem */
+button,
+.button {
+    /* Classe .button para aplicar estilo a outros elementos como <a> */
+    display: inline-block;
+    font-weight: 400;
+    color: var(--light-color);
+    background-color: var(--primary-color);
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: calc(var(--spacing-unit) * 0.75) calc(var(--spacing-unit) * 1.5); /* 6px 12px */
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    border-radius: var(--border-radius);
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+button:hover,
+.button:hover {
+    background-color: color-mix(
+        in srgb,
+        var(--primary-color) 85%,
+        black
+    ); /* Escurece um pouco */
+    color: var(--light-color);
+}
+
+/* Adicione mais estilos para inputs, cards, etc., conforme necessário */
