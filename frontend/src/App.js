@@ -12,35 +12,24 @@ import ProfilePage from './components/ProfilePage';
 import { useAuth } from './hooks/useAuth';
 import Footer from './components/Footer';
 
-// ID da Aplicação (pode ser usado para configuração ou logs)
-// const appId = typeof __app_id !== 'undefined' ? __app_id : 'health-app-default'; // Removido pois não é usado em App.js
 
-// Componente Principal
+
 function App() {
   const [currentPage, setCurrentPage] = useState('Home');
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const { userId, userName, isAuthReady, token, profilePictureUrl } = useAuth();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  // Função original para lidar com a mudança da foto de perfil (com alerta, antes da implementação da página de perfil)
+  
   const handleProfilePictureChange = (event) => {
     const file = event.target.files[0];
     if (file) {
-      // Aqui você precisaria adicionar a lógica para:
-      // 1. Ler o arquivo (ex: com FileReader para preview, se desejar)
-      // 2. Enviar o arquivo para o seu backend API (usando apiRequest ou outra função de upload)
-      // 3. Lidar com a resposta do backend (sucesso/erro)
-      // 4. Atualizar a UI com a nova imagem de perfil se o upload for bem sucedido
+      
 
       console.log("Arquivo de imagem selecionado:", file);
       alert("Funcionalidade de upload de imagem não totalmente implementada. Arquivo selecionado: " + file.name);
 
-      // Exemplo básico de como ler o arquivo para preview (opcional)
-      // const reader = new FileReader();
-      // reader.onloadend = () => {
-      //   // Aqui você pode definir a imagem de preview, ex: setProfileImageUrl(reader.result);
-      // };
-      // reader.readAsDataURL(file);
+     
     }
   };
 

@@ -5,7 +5,7 @@ export const apiRequest = async (url, method = 'GET', body = null, token = null,
 
   const headers = {}; // Começa com headers vazios
 
-  // Só define Content-Type como application/json se não for FormData
+  
   if (!isFormData) {
     headers['Content-Type'] = 'application/json';
   }
@@ -20,7 +20,7 @@ export const apiRequest = async (url, method = 'GET', body = null, token = null,
   };
 
   if (body && (method === 'POST' || method === 'PUT')) {
-    // Stringify o corpo apenas se Content-Type for application/json (ou seja, !isFormData)
+    
     options.body = isFormData ? body : JSON.stringify(body);
   }
 
