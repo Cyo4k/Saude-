@@ -193,7 +193,7 @@ O backend expõe uma API RESTful para o frontend consumir. Todas as rotas são p
 
 
 
-# Documento de Arquitetura da Aplicação "Saúde+"
+# Documento de Arquitetura da Aplicação Saúde+
 
 ## INTRODUÇÃO
 
