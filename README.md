@@ -1,4 +1,4 @@
-# 📝 Documentação Completa do Projeto "Saúde+" (Full-Stack)
+# 📝 Documentação Completa do Projeto Saúde+ (Full-Stack)
 
 
 Este documento fornece um guia completo para configurar, instalar e executar a aplicação "Saúde+", que consiste em um frontend em React e um backend em Node.js com Express e MongoDB.
