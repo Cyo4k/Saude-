@@ -40,8 +40,10 @@ const UPAsPage = ({ userId, token }) => {
   }, [searchTerm]);
 
 
-  const openInMaps = ( address) => {
-    if (address) {
+  const openInMaps = (address, pluscode) => {
+    if (pluscode) {
+        window.open(`https://www.google.com/maps?q=${encodeURIComponent(pluscode)}`, '_blank');
+    } else if (address) {
         window.open(`https://www.google.com/maps?q=${encodeURIComponent(address)}`, '_blank');
     }
   };
@@ -86,7 +88,7 @@ const UPAsPage = ({ userId, token }) => {
                 </div>
               )}
               <button 
-                onClick={() => openInMaps(upa.endereco)}
+                onClick={() => openInMaps(upa.endereco, upa.pluscode)}
                 className="mt-3 inline-flex items-center px-3 py-1.5 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-teal-500 hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-400 transition-colors"
               >
                 Ver no Mapa <MapPin size={16} className="ml-2"/>
